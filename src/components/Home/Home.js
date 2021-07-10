@@ -64,7 +64,7 @@ const Home = (props) => {
 						<button className="btn btn-dark">Explore Now</button>
 					</div>
 					<div className="col-md-4 col-12 banner-img">
-						<img src={secImg} alt="my image" />
+						<img src={secImg} alt="minhaz" />
 					</div>
 				</div>
 			</Banner>

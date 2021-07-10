@@ -101,7 +101,7 @@ const About = () => {
 					hard work and efficiency. That's why I am always ready to accomplish
 					any task by working hard. I always focus on learning new technology.
 					My goal is to become A World-Class Professional Web Developer.
-					<a href="#">More</a>
+					<a href="https://www.google.com/">More</a>
 				</p>
 			</Box>
 
