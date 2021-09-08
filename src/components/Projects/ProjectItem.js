@@ -33,14 +33,14 @@ const ToolSpan = styled.span`
 
 
 const ProjectItem = (props) => {
-  const {id, img, title, description, features, tools, live, repo} = props.pj;
+  const {img, title, features, tools, live, repo} = props.pj;
   return (
     <ItemWrapper>
       <div className="row">
         <div className="col-md-4">
           <Img src={img} alt="project thumble" />
           <Title>{title}</Title>
-          <Title><a href={live} target="_blank" className="mx-3"><FaExternalLinkAlt/></a> <a href={repo} target="_blank"><FaGithub/></a></Title>
+          <Title><a href={live} target="_blank" rel="noreferrer" className="mx-3"><FaExternalLinkAlt/></a> <a href={repo} target="_blank" rel="noreferrer"><FaGithub/></a></Title>
         </div>
         <div className="col-md-8">
           <h4>Features: </h4>

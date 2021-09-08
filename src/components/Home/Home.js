@@ -53,7 +53,7 @@ const Banner = styled.div`
 `;
 
 const Home = (props) => {
-	const { title, secImg, desc } = props;
+	const { title, secImg } = props;
 	return (
 		<div>
 			<Banner className="container" ImgUrl={bgImg}>
