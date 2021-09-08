@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import {FaExternalLinkAlt, FaGithub} from 'react-icons/fa';
 
 const ItemWrapper = styled.div`
-  width: 100%;
-  margin: 10px 20px;
+  width: 90%;
+  margin: 10px auto 20px 20px;
   color: white;
   border: 1px solid #f4dd09;
   padding: 10px;
