@@ -18,7 +18,7 @@ const Img = styled.img`
   height: 180px;
   border-radius: 10px;
 `;
-const Title = styled.h2`
+const Title = styled.h3`
   text-align: center;
   font-family: cursive;
   margin: 10px 0;
