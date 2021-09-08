@@ -11,6 +11,7 @@ import Contact from "./components/Contact/Contact";
 
 const FullBody = styled.body`
 	background-color: #191923;
+	min-height: 100vh;
 	padding: 15px 0;
 	font-family: "Roboto", sans-serif;
 	& .content-box {

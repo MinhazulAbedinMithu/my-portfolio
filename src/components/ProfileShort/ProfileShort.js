@@ -6,6 +6,7 @@ import * as FaIcons from "react-icons/fa";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import ChangingProgressProvider from "./ChangeProgressProvider";
 import "react-circular-progressbar/dist/styles.css";
+import { Link } from "react-router-dom";
 // import { ProgressBar } from "react-bootstrap";
 
 const skillData1 = [
@@ -117,7 +118,7 @@ const CvButton = styled.div`
 	text-align: center;
 	background-color: #25252f;
 	padding: 20px 0;
-	& button {
+	& a {
 		color: rgb(1, 0, 82);
 		background-color: #f4dd09;
 		font-weight: bold;
@@ -133,12 +134,16 @@ const ProfileShort = () => {
 				<p>Front-end Developer</p>
 				<div className="contact">
 					<div className="social">
-						<FaIcons.FaGithubSquare className="icon" />
-						<FaIcons.FaLinkedin className="icon" />
-						<FaIcons.FaGooglePlusSquare className="icon" />
-						<FaIcons.FaFacebookSquare className="icon" />
+						<a href="https://github.com/MinhazulAbedinMithu" target="_blank" rel="noreferrer"><FaIcons.FaGithubSquare className="icon" /></a>
+						<a href="https://www.linkedin.com/in/minhazulabedinmithu/" target="_blank" rel="noreferrer"><FaIcons.FaLinkedin className="icon" /></a>
+						<a href="mailto:minhazulabedinmithu@gmail.com" target="_blank" rel="noreferrer"><FaIcons.FaGooglePlusSquare className="icon" /></a>
+						<a href="https://www.facebook.com/MinhazulAbedinMithu" target="_blank" rel="noreferrer"><FaIcons.FaFacebookSquare className="icon" /></a>
+						
+						
+						
+						
 					</div>
-					<button className="btn ">Contact Me</button>
+					<Link to="/contact" className="btn ">Contact Me</Link>
 				</div>
 			</div>
 			<SkillBox>
@@ -181,9 +186,9 @@ const ProfileShort = () => {
 				</SkillSet>
 			</SkillBox>
 			<CvButton>
-				<button className="btn">
+				<a href="../../Minhazul_Abedin__resume.pdf" className="btn" download>
 					<FaIcons.FaCloudDownloadAlt /> <span>Download CV</span>{" "}
-				</button>
+				</a>
 			</CvButton>
 		</WrapperAbout>
 	);
