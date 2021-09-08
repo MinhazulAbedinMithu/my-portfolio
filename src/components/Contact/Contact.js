@@ -4,7 +4,7 @@ import contactImg from "../../images/contact.png";
 const Contact = () => {
 	return (
 		<div>
-			<Home title="Contact Me" secImg={contactImg} />
+			<Home title="Contact Me" desc="" secImg={contactImg} />
 		</div>
 	);
 };

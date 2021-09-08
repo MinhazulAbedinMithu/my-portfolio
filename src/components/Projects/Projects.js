@@ -2,19 +2,19 @@ import React from "react";
 import Home from "../Home/Home";
 import projectImg from "../../images/projects.png";
 import styled from "styled-components";
+import { projectsData } from "./ProjectsData";
+import ProjectItem from "./ProjectItem";
 
-const ProjectCont = styled.div``;
-const ProjectItem = styled.div``;
+const ProjectCont = styled.div`
+	color: white;
+`;
 
 const Projects = () => {
 	return (
 		<div>
-			<Home title="Projects" secImg={projectImg} />
+			<Home title="Projects" desc="" secImg={projectImg} />
 			<ProjectCont>
-			
-				<ProjectItem>
-					<h2>Mithu</h2>
-				</ProjectItem>
+				{projectsData.map(pj => <ProjectItem pj={pj} />)}
 			</ProjectCont>
 		</div>
 	);

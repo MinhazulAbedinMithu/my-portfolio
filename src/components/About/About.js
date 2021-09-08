@@ -88,7 +88,7 @@ const EduItem = styled.div`
 const About = () => {
 	return (
 		<div>
-			<Home title="About Me" secImg={myImg} />
+			<Home title="About Me" desc="I am a ReactJs Front-End Developer. I can also build MERN Stack Web App." secImg={myImg} />
 			<Box className="col-12 col-md-12">
 				<h2>Minhazul Abedin</h2>
 				<p>

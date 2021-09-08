@@ -66,7 +66,7 @@ const WrapperAbout = styled.div`
 			& .social {
 				& .icon {
 					font-size: 40px;
-					color: rgb(182, 195, 0);
+					color: #f4dd09;
 					padding: 5px;
 				}
 			}
@@ -94,9 +94,9 @@ const SkillBox = styled.div`
 	& h2 {
 		text-align: center;
 		font-family: cursive;
-		color: rgb(9, 0, 131);
+		color: yellow;
 		font-weight: 700;
-		border-bottom: 2px solid white;
+		border-bottom: 2px solid #f4dd09;
 	}
 `;
 const SkillSet = styled.div`
@@ -107,7 +107,7 @@ const SkillSet = styled.div`
 		& li {
 			padding: 5px 0;
 			& .icon {
-				color: yellow;
+				color: #f4dd09;
 			}
 		}
 	}
@@ -119,7 +119,7 @@ const CvButton = styled.div`
 	padding: 20px 0;
 	& button {
 		color: rgb(1, 0, 82);
-		background-color: yellow;
+		background-color: #f4dd09;
 		font-weight: bold;
 	}
 `;
@@ -154,7 +154,7 @@ const ProfileShort = () => {
 											text={item.title}
 											styles={buildStyles({
 												textColor: "white",
-												pathColor: "yellow",
+												pathColor: "#f4dd09",
 												trailColor: "rgb(1, 0, 82)",
 												pathTransition:
 													percentage === 0

@@ -4,7 +4,7 @@ import blogImg from "../../images/blogs.png";
 const Blog = () => {
 	return (
 		<div>
-			<Home title="Blogs" secImg={blogImg} />
+			<Home title="Blogs" desc="" secImg={blogImg} />
 		</div>
 	);
 };

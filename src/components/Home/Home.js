@@ -35,7 +35,7 @@ const Banner = styled.div`
 			color: pink;
 		}
 		& button {
-			background-color: yellow;
+			background-color: #f4dd09;
 			color: rgb(1, 0, 82);
 			font-weight: bold;
 			margin-top: 25px;
@@ -53,14 +53,14 @@ const Banner = styled.div`
 `;
 
 const Home = (props) => {
-	const { title, secImg } = props;
+	const { title, secImg, desc } = props;
 	return (
 		<div>
 			<Banner className="container" ImgUrl={bgImg}>
 				<div className="row">
 					<div className="col-md-8 col-12 banner-cont">
 						<h2>{title}</h2>
-						<p>I build ios and android application.</p>
+						<p>I am a ReactJs Front-End Developer. I can build MERN Stack Web App.</p>
 						<button className="btn btn-dark">Explore Now</button>
 					</div>
 					<div className="col-md-4 col-12 banner-img">
