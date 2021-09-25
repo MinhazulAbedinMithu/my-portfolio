@@ -16,6 +16,7 @@ const FullBody = styled.body`
 	font-family: "Roboto", sans-serif;
 	& .content-box {
 		position: relative;
+		margin: 0 auto;
 		background-color: #1e1e28;
 		padding-top: 15px;
 	}

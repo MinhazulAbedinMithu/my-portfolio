@@ -7,64 +7,69 @@ import { NavbarData } from "./NavbarData";
 import styled from "styled-components";
 
 const NavbarNav = styled.div`
-	position: absolute;
-	top: 2%;
-	right: 13.5%;
-	margin: 0;
+	position: fixed;
+	top: 15px;
+	right: 22%;
+	height: 100vh;
+	width: 100px;
+	background-color: black;
 
 	.menu-bars {
 		background-color: rgb(0, 0, 0);
-		height: ${(props) => (props.sidebar ? "100vh" : "100px")};
-		/* height: 95vh; */
-		padding: 0 15px;
+		padding: 0 10px;
 		font-size: 60px;
 		color: yellow;
 	}
 `;
 const Nav = styled.nav`
 	background-color: black;
-	padding: 40px 20px;
-	margin: 0;
+	padding: 50px 10px;
+	margin: 0 auto;
 `;
 const NavUl = styled.ul`
 	list-style: none;
 	margin: 0;
 	text-align: center;
-	& li{
+	& li {
 		color: white;
-		& :hover{
+		margin: 40px 0;
+		& :hover {
 			color: yellow;
+		}
+		& .tooltip{
+			color: white;
+			background-color: black;
+			border: 1px solid yellow;
 		}
 	}
 `;
 
+// <Link to="#" className="menu-bars" sidebar>
+// 					{sideBar ? (
+// 						<AiIcons.AiOutlineClose onClick={showNavbar} />
+// 					) : (
+// 						<FaIcons.FaBars onClick={showNavbar} />
+// 					)}
+// 				</Link>
 export const Navbar = () => {
 	const [sideBar, setSiteBar] = useState(false);
 	const showNavbar = () => setSiteBar(!sideBar);
 
 	return (
 		<>
-			<NavbarNav className="navbar col-md-1">
-				<Link to="#" className="menu-bars" sidebar>
-					{sideBar ? (
-						<AiIcons.AiOutlineClose onClick={showNavbar} />
-					) : (
-						<FaIcons.FaBars onClick={showNavbar} />
-					)}
-				</Link>
-				{sideBar && (
-					<Nav className={sideBar ? "nav-menu active" : "nav-menu"}>
-						<NavUl className="navbar-items">
-							{NavbarData.map((item, index) => {
-								return (
-									<li key={index} className={item.cName}>
-										<Link to={item.path}>{item.icon}</Link>
-									</li>
-								);
-							})}
-						</NavUl>
-					</Nav>
-				)}
+			<NavbarNav className="navbar">
+				<Nav className={sideBar ? "nav-menu active" : "nav-menu"}>
+					<NavUl className="navbar-items">
+						{NavbarData.map((item, index) => {
+							return (
+								<li key={index} className={`${item.cName} position-relative`}>
+									<Link to={item.path}>{item.icon}</Link>
+									<span className="tooltip">{item.title}</span>
+								</li>
+							);
+						})}
+					</NavUl>
+				</Nav>
 			</NavbarNav>
 		</>
 	);

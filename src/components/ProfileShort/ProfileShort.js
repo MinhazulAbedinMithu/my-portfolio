@@ -52,6 +52,12 @@ const skillData2 = [
 const WrapperAbout = styled.div`
 	margin: 0;
 	padding: 0;
+	height: 100vh;
+	position: fixed;
+	top: 15px;
+	left: 10%;
+	width: 100%;
+	/* background-color: #f4dd09; */
 	& .pro-box {
 		width: 100%;
 		text-align: center;
@@ -71,9 +77,9 @@ const WrapperAbout = styled.div`
 					padding: 5px;
 				}
 			}
-			& button {
+			& .button {
 				background-color: transparent;
-				border: 1px solid yellow;
+				border: 2px solid yellow;
 				color: white;
 				font-weight: bold;
 				margin-top: 10px;
@@ -92,15 +98,17 @@ const AboutImg = styled.img`
 const SkillBox = styled.div`
 	background-color: #20202a;
 	color: white;
+	padding: 20px 0;
 	& h2 {
 		text-align: center;
 		font-family: cursive;
 		color: yellow;
 		font-weight: 700;
-		border-bottom: 2px solid #f4dd09;
+		border-bottom: 1px solid #f4dd09;
 	}
 `;
 const SkillSet = styled.div`
+	padding: 10px 0;
 	& ul {
 		list-style: none;
 		padding: 10px;
@@ -127,23 +135,45 @@ const CvButton = styled.div`
 
 const ProfileShort = () => {
 	return (
-		<WrapperAbout className="col-md-3 about-short">
+		<WrapperAbout className="col-md-2 about-short">
 			<div className="pro-box">
 				<AboutImg src={ProImg}></AboutImg>
 				<h4>Minhazul Abedin</h4>
 				<p>Front-end Developer</p>
 				<div className="contact">
 					<div className="social">
-						<a href="https://github.com/MinhazulAbedinMithu" target="_blank" rel="noreferrer"><FaIcons.FaGithubSquare className="icon" /></a>
-						<a href="https://www.linkedin.com/in/minhazulabedinmithu/" target="_blank" rel="noreferrer"><FaIcons.FaLinkedin className="icon" /></a>
-						<a href="mailto:minhazulabedinmithu@gmail.com" target="_blank" rel="noreferrer"><FaIcons.FaGooglePlusSquare className="icon" /></a>
-						<a href="https://www.facebook.com/MinhazulAbedinMithu" target="_blank" rel="noreferrer"><FaIcons.FaFacebookSquare className="icon" /></a>
-						
-						
-						
-						
+						<a
+							href="https://github.com/MinhazulAbedinMithu"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<FaIcons.FaGithubSquare className="icon" />
+						</a>
+						<a
+							href="https://www.linkedin.com/in/minhazulabedinmithu/"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<FaIcons.FaLinkedin className="icon" />
+						</a>
+						<a
+							href="mailto:minhazulabedinmithu@gmail.com"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<FaIcons.FaGooglePlusSquare className="icon" />
+						</a>
+						<a
+							href="https://www.facebook.com/MinhazulAbedinMithu"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<FaIcons.FaFacebookSquare className="icon" />
+						</a>
 					</div>
-					<Link to="/contact" className="btn ">Contact Me</Link>
+					<Link to="/contact" className="btn button">
+						Contact Me
+					</Link>
 				</div>
 			</div>
 			<SkillBox>
