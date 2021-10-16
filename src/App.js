@@ -83,7 +83,7 @@ const Img = styled.img`
 
 function App() {
 	const [showNav, setShowNav] = useState(false);
-	const [showProfile, setShowProfile] = useState(false);
+	const [showProfile, setShowProfile] = useState(	false);
 
 	return (
 		<FullBody>

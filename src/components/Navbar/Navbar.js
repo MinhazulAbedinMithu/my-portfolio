@@ -13,7 +13,7 @@ const NavbarNav = styled.div`
 	width: 100px;
 	background-color: #20202a;
 	transition: all 0.5s ease;
-	display: ${props => !props.show && "none"};
+	display: ${props => props.show && "none"};
 
 	${mobile({
 		zIndex: "5",

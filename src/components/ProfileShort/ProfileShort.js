@@ -59,7 +59,7 @@ const WrapperAbout = styled.div`
 	left: 10%;
 	width: 100%;
 	transition: all 0.5s ease;
-	display: ${(props) => !props.show && "none"};
+	display: ${(props) => props.show && "none"};
 
 	${mobile({
 		width: "100%",
@@ -70,7 +70,6 @@ const WrapperAbout = styled.div`
 		zIndex: "5",
 	})}
 
-	/* background-color: #f4dd09; */
 	& .pro-box {
 		width: 100%;
 		text-align: center;
