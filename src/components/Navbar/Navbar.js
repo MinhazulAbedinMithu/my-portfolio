@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import * as FaIcons from "react-icons/fa";
-import * as AiIcons from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { NavbarData } from "./NavbarData";
 import styled from "styled-components";
@@ -53,21 +51,12 @@ const NavUl = styled.ul`
 	}
 `;
 
-// <Link to="#" className="menu-bars" sidebar>
-// 					{sideBar ? (
-// 						<AiIcons.AiOutlineClose onClick={showNavbar} />
-// 					) : (
-// 						<FaIcons.FaBars onClick={showNavbar} />
-// 					)}
-// 				</Link>
 export const Navbar = ({ showNav }) => {
-	const [sideBar, setSiteBar] = useState(false);
-	console.log(showNav);
 
 	return (
 		<>
 			<NavbarNav className="navbar" show={showNav}>
-				<Nav className={sideBar ? "nav-menu active" : "nav-menu"}>
+				<Nav className="nav-menu">
 					<NavUl className="navbar-items">
 						{NavbarData.map((item, index) => {
 							return (
