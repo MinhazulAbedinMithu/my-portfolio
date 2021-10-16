@@ -7,6 +7,7 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import ChangingProgressProvider from "./ChangeProgressProvider";
 import "react-circular-progressbar/dist/styles.css";
 import { Link } from "react-router-dom";
+import { mobile } from "../../responsive";
 // import { ProgressBar } from "react-bootstrap";
 
 const skillData1 = [
@@ -57,13 +58,25 @@ const WrapperAbout = styled.div`
 	top: 15px;
 	left: 10%;
 	width: 100%;
+	transition: all 0.5s ease;
+	display: ${(props) => !props.show && "none"};
+
+	${mobile({
+		width: "100%",
+		position: "absolute",
+		top: "90px",
+		left: "0%",
+		right: "0%",
+		zIndex: "5",
+	})}
+
 	/* background-color: #f4dd09; */
 	& .pro-box {
 		width: 100%;
 		text-align: center;
 		background-color: #25252f;
 		color: white;
-		padding: 15px 0;
+		padding: 10px 0;
 		box-shadow: 2px 5px 5px rgb(41, 41, 41);
 		& .contact {
 			border-top: 2px solid rgb(59, 59, 59);
@@ -98,7 +111,7 @@ const AboutImg = styled.img`
 const SkillBox = styled.div`
 	background-color: #20202a;
 	color: white;
-	padding: 20px 0;
+	padding: 15px 0;
 	& h2 {
 		text-align: center;
 		font-family: cursive;
@@ -125,7 +138,7 @@ const ProgressItem = styled.div``;
 const CvButton = styled.div`
 	text-align: center;
 	background-color: #25252f;
-	padding: 20px 0;
+	padding: 15px 0;
 	& a {
 		color: rgb(1, 0, 82);
 		background-color: #f4dd09;
@@ -133,9 +146,10 @@ const CvButton = styled.div`
 	}
 `;
 
-const ProfileShort = () => {
+const ProfileShort = ({ showProfile }) => {
+	console.log(showProfile);
 	return (
-		<WrapperAbout className="col-md-2 about-short">
+		<WrapperAbout className="col-md-2 about-short" show={showProfile}>
 			<div className="pro-box">
 				<AboutImg src={ProImg}></AboutImg>
 				<h4>Minhazul Abedin</h4>

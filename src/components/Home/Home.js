@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import bgImg from "../../images/bg.jpg";
+import { mobile } from "../../responsive";
 
 const Banner = styled.div`
 	background-image: url(${(props) => props.ImgUrl});
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-
+	margin-top: 70px;
 	position: relative;
 	z-index: 0;
 
@@ -30,6 +31,7 @@ const Banner = styled.div`
 			font-family: "Carter One", cursive;
 			font-size: 70px;
 			margin: 0;
+			${mobile({ fontSize: "50px", texAlign: "center" })}
 		}
 		& p {
 			color: pink;
@@ -60,7 +62,10 @@ const Home = (props) => {
 				<div className="row">
 					<div className="col-md-8 col-12 banner-cont">
 						<h2>{title}</h2>
-						<p>I am a ReactJs Front-End Developer. I can build MERN Stack Web App.</p>
+						<p>
+							I am a ReactJs Front-End Developer. I can build MERN Stack Web
+							App.
+						</p>
 						<button className="btn btn-dark">Explore Now</button>
 					</div>
 					<div className="col-md-4 col-12 banner-img">
